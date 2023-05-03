@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../provider/AuthProviders';
 
 const Register = () => {
 
+  const user = useContext(AuthContext)
+  console.log(user)
 
     const handleRegister = (event) => {
        const form = event.target;
